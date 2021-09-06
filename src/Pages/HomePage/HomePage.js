@@ -182,6 +182,7 @@ class HomePage extends Component {
       this.setState({ showVideoCall: "none" });
       this.reciveCallOn();
       socket.on("callEnded");
+      window.location.reload();
     });
   };
   handleShowCallDisc = () => {
@@ -194,6 +195,7 @@ class HomePage extends Component {
     this.connectionRef.current.destroy();
     this.reciveCallOn();
     this.setState({ showVideoCall: "none"});
+    window.location.reload();
   };
   handleShowUpdate = () => {
     const show = this.state.showUpdate;
