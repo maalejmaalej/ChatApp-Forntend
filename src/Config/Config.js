@@ -1,3 +1,3 @@
-export const apiURL= "https://chatpiximind.herokuapp.com/"
+export const apiURL= "https://chatpiximind.herokuapp.com"
 
 
