@@ -7,7 +7,7 @@ import SideBar from "./components/SideBar";
 import MenuIcon from "@material-ui/icons/Menu";
 import Discussion from "./components/Discussion";
 import ModalUpdateCompte from "./components/ModalUpdateCompte";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import Peer from "simple-peer";
 import CallEndIcon from "@material-ui/icons/CallEnd";
 import MicIcon from "@material-ui/icons/Mic";
@@ -296,10 +296,12 @@ class HomePage extends Component {
                         <div className="imgCall">
                           {this.state.caller.image ? (
                             <img
+                            alt=""
                               src={`${apiURL}/user/image/${this.state.caller.image}`}
                             />
                           ) : (
-                            <img src={image} />
+                            <img
+                            alt="" src={image} />
                           )}
                         </div>
                       </div>
@@ -388,11 +390,13 @@ class HomePage extends Component {
               <div className="imgNom">
                 {this.state.caller.image ? (
                   <img
+                  alt=""
                     className="imageContact"
                     src={`${apiURL}/user/image/${this.state.caller.image}`}
                   />
                 ) : (
                   <img
+                  alt=""
                     className="imageContact"
                     src={image}
                   />

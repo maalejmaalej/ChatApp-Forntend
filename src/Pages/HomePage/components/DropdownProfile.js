@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Dropdown, Button, Offcanvas } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { connect } from "react-redux";
 import { apiURL } from "../../../Config/Config";
 import io from "socket.io-client";

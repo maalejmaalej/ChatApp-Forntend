@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import InsertPhotoIcon from "@material-ui/icons/InsertPhoto";
 import { apiURL } from "../../Config/Config";
-import { useHistory } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const ModalImage = (props) => {
@@ -30,7 +29,7 @@ const ModalImage = (props) => {
     fetch(apiURL + "/user/image/" + userId, {
       method: "post",
       headers: {
-        authorization: `Bearer ${this.props.auth.token}`,
+        // authorization: `Bearer ${this.props.auth.token}`,
       },
       body: data,
     })

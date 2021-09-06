@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { apiURL } from "../../../Config/Config";
 import CloseIcon from "@material-ui/icons/Close";
@@ -139,10 +139,11 @@ class Duscussion extends Component {
                 {this.props.contact.contact.image ? (
                   <img
                     className="imgProfile"
+                    alt=""
                     src={`${apiURL}/user/image/${this.props.contact.contact.image}`}
                   ></img>
                 ) : (
-                  <img className="imgProfile" src={image}></img>
+                  <img alt="" className="imgProfile" src={image}></img>
                 )}
               </div>
               {this.props.contact.contact.nom}{" "}
@@ -208,11 +209,13 @@ class Duscussion extends Component {
                         <div className="photoProfile">
                           {this.props.contact.contact.image ? (
                             <img
+                            alt=""
                               className="imgProfile"
                               src={`${apiURL}/user/image/${this.props.contact.contact.image}`}
                             ></img>
                           ) : (
-                            <img className="imgProfile" src={image}></img>
+                            <img
+                            alt="" className="imgProfile" src={image}></img>
                           )}
                         </div>
                         <div className="msg">
@@ -250,11 +253,12 @@ class Duscussion extends Component {
                     <div className="photoProfile">
                       {this.props.contact.contact.image ? (
                         <img
+                        alt=""
                           className="imgProfile"
                           src={`${apiURL}/user/image/${this.props.contact.contact.image}`}
                         ></img>
                       ) : (
-                        <img className="imgProfile" src={image}></img>
+                        <img alt="" className="imgProfile" src={image}></img>
                       )}
                     </div>
                     <div className="msg">
